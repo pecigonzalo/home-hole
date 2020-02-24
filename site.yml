@@ -1,0 +1,13 @@
+---
+- name: System config
+  hosts: homehole
+  become: yes
+  vars:
+    fqdn: home-hole
+    timezone: Europe/Madrid
+  roles:
+    - role: system
+    - role: docker
+      tags: [docker]
+    - role: pi-hole
+      tags: [pi-hole]
