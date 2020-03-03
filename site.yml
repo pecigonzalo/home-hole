@@ -11,3 +11,5 @@
       tags: [docker]
     - role: pi-hole
       tags: [pi-hole]
+    - role: watchtower
+      tags: [watchtower]

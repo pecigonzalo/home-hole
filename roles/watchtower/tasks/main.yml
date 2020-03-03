@@ -1,0 +1,10 @@
+---
+- name: Create and start Watchtower container
+  docker_container:
+    name: watchtower
+    image: containrrr/watchtower
+    pull: yes
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart_policy: unless-stopped
+    state: started
